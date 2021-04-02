@@ -18,7 +18,7 @@ Más información sobre los requisitos en: https://medium.com/@gauravyeole/creat
 2. Abrir el proyecto en VS Code
 3. En la pestaña de la terminal, escribir el comando dotnet build
 4. En la misma terminal, escribir el comando dotnet run (si no se mostraron errores ejecutando
-el comando del punto 4)
+el comando del punto 3)
 5. Abrir la herramienta Postman
 6. Revisar en las configuraciones de Postman si la verificación de certificados SSL está apagada: https://i.imgur.com/PjCsTwq.jpg
 7. Probar los servicios desde Postman revisando la documentación de la colección disponible en: https://documenter.getpostman.com/view/7726945/TzCP883h
