@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace HogwartsEnrollmentSystem.Controllers
 {
     [ApiController]
-    //[Route("api/[controller]")]
     [Route("api/application-for-entry")]
     public class ApplicationForEntryController : ControllerBase
     {

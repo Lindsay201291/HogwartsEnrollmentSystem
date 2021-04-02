@@ -51,7 +51,6 @@ namespace HogwartsEnrollmentSystem.Services
 
         public bool ValidateRequestData(ApplicationForEntry applicationForEntry) {
 
-            //bool isApplicantIdRepeating = true;
             bool isTheApplicantValidName = false;
             bool isTheApplicantValidSurname = false;
             bool isTheApplicantValidAge = false;
@@ -62,16 +61,9 @@ namespace HogwartsEnrollmentSystem.Services
             int numOfDigitsForId;
             int posOfHouseInArray;
 
-            //var obj = _applicationForEntryList.FirstOrDefault(x => x.ApplicantId == applicationForEntry.ApplicantId);
             numOfDigitsForAge = applicationForEntry.ApplicantAge.ToString().Length;
             numOfDigitsForId = applicationForEntry.ApplicantId.ToString().Length;
             posOfHouseInArray = Array.IndexOf(houses, applicationForEntry.ApplicantHouse.ToUpper());
-
-            /*if (obj == null) {
-                isApplicantIdRepeating = false;
-            } else if (obj.Id == applicationForEntry.Id) {
-                isApplicantIdRepeating = false;
-            }*/
 
             if (applicationForEntry.ApplicantName.Length <= maxLengthForApplicantName) {
                 isTheApplicantValidName = true;
