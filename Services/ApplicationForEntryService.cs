@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using HogwartsEnrollmentSystem.Models;
 using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace HogwartsEnrollmentSystem.Services
 {
@@ -56,6 +57,10 @@ namespace HogwartsEnrollmentSystem.Services
             bool isTheApplicantValidAge = false;
             bool isTheApplicantValidId = false;
             bool houseWasFound = false;
+            bool onlyLettersForName = false;
+            bool onlyLettersForSurname = false;
+            bool onlyNumbersForId = false;
+            bool onlyNumbersForAge = false;
 
             int numOfDigitsForAge;
             int numOfDigitsForId;
@@ -85,8 +90,30 @@ namespace HogwartsEnrollmentSystem.Services
                 houseWasFound = true;
             }
 
+            if (Regex.IsMatch(applicationForEntry.ApplicantName, @"^[a-zA-Z]+$"))
+            {
+                onlyLettersForName = true;
+            }
+
+            if (Regex.IsMatch(applicationForEntry.ApplicantSurname, @"^[a-zA-Z]+$"))
+            {
+                onlyLettersForSurname = true;
+            }
+
+            if (Regex.IsMatch(applicationForEntry.ApplicantId.ToString(), @"^[0-9]+$"))
+            {
+                onlyNumbersForId = true;
+            }
+
+            if (Regex.IsMatch(applicationForEntry.ApplicantAge.ToString(), @"^[0-9]+$"))
+            {
+                onlyNumbersForAge = true;
+            }
+
             if ((isTheApplicantValidName) && (isTheApplicantValidSurname) 
-                && (isTheApplicantValidAge) && (isTheApplicantValidId) && (houseWasFound)) {
+                && (isTheApplicantValidAge) && (isTheApplicantValidId)
+                && (onlyLettersForName) && (onlyLettersForSurname) 
+                && (onlyNumbersForId) && (onlyNumbersForAge) && (houseWasFound)) {
                 return true;
             } else {
                 return false;
