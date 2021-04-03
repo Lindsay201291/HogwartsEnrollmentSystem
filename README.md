@@ -6,7 +6,7 @@ Versión de .NET Core utilizada: 3.1
 
 1. Instalar el SDK de .NET Core 3.1 o superior. Enlace: https://dotnet.microsoft.com/download
 2. Instalar Visual Studio Code (VS Code). Enlace: https://code.visualstudio.com/Download
-3. Instalar estensión de C# en VS Code disponible en: https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp
+3. Instalar extensión de C# en VS Code disponible en: https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp
 4. Instalar la extensión del administrador de paquetes de NuGet para VS Code disponible en: https://marketplace.visualstudio.com/items?itemName=jmrog.vscode-nuget-package-manager (Opcional)
 5. Instalar la extensión Visual Studio IntelliCode de VS Code disponible en: https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode (Opcional)
 
